@@ -35,7 +35,11 @@ export function emailInstructions(tone: EmailTone) {
   ].join("\n");
 }
 
-export function emailPrompt(input: { instructions: string; recipient?: string; sender?: string }) {
+export function emailPrompt(input: {
+  instructions: string;
+  recipient?: string | undefined;
+  sender?: string | undefined;
+}) {
   const lines = [`Instructions: ${input.instructions}`];
   if (input.recipient) lines.push(`Recipient: ${input.recipient}`);
   if (input.sender) lines.push(`Sender: ${input.sender}`);
