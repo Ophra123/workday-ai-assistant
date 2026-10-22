@@ -94,8 +94,8 @@ export function AiDisclaimer({ className }: { className?: string }) {
     <p className={cn("flex items-start gap-2 text-xs text-muted-foreground", className)}>
       <ShieldAlert className="mt-px size-3.5 shrink-0 text-warning" />
       <span>
-        AI-generated content can be inaccurate or incomplete. Review and edit before using it,
-        and avoid sharing confidential or personal information.
+        AI-generated content can be inaccurate or incomplete. Review and edit before using it, and
+        avoid sharing confidential or personal information.
       </span>
     </p>
   );

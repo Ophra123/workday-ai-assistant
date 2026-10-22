@@ -29,13 +29,15 @@ const TOOLS = [
     to: "/email",
     icon: Mail,
     title: "Email Generator",
-    description: "Turn quick instructions into complete emails in a formal, friendly or persuasive tone.",
+    description:
+      "Turn quick instructions into complete emails in a formal, friendly or persuasive tone.",
   },
   {
     to: "/research",
     icon: Search,
     title: "Research Assistant",
-    description: "Answer questions, summarise pasted text, extract key insights and get recommendations.",
+    description:
+      "Answer questions, summarise pasted text, extract key insights and get recommendations.",
   },
   {
     to: "/chat",
@@ -69,7 +71,8 @@ function Dashboard() {
             <h2 className="mt-4 text-base font-semibold text-foreground">{title}</h2>
             <p className="mt-1 flex-1 text-sm text-muted-foreground">{description}</p>
             <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary">
-              Open <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+              Open{" "}
+              <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
             </span>
           </Link>
         ))}

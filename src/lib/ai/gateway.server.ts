@@ -71,7 +71,10 @@ export function describeAiError(error: unknown): AiErrorInfo {
           "AI credits for this workspace have run out. Add credits in your Lovable workspace to continue.",
       };
     case 403:
-      return { status, message: bodyMessage ?? "AI access is currently blocked for this workspace." };
+      return {
+        status,
+        message: bodyMessage ?? "AI access is currently blocked for this workspace.",
+      };
     case 429:
       return {
         status,

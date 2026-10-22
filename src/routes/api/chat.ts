@@ -7,10 +7,7 @@ import {
   responsesProviderOptions,
 } from "@/lib/ai/gateway.server";
 import { CHAT_INSTRUCTIONS } from "@/lib/ai/prompts";
-import {
-  getLovableAiGatewayRunId,
-  withLovableAiGatewayRunIdHeader,
-} from "@/lib/ai/run-id.server";
+import { getLovableAiGatewayRunId, withLovableAiGatewayRunIdHeader } from "@/lib/ai/run-id.server";
 
 function jsonError(status: number, error: string) {
   return new Response(JSON.stringify({ error }), {
@@ -37,10 +34,7 @@ export const Route = createFileRoute("/api/chat")({
           return jsonError(400, "Invalid conversation length.");
         }
 
-        const { model, runIdFetch } = createGatewayModel(
-          apiKey,
-          getLovableAiGatewayRunId(request),
-        );
+        const { model, runIdFetch } = createGatewayModel(apiKey, getLovableAiGatewayRunId(request));
         const result = streamText({
           model,
           instructions: CHAT_INSTRUCTIONS,

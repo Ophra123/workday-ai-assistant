@@ -5,7 +5,13 @@ import { useState, type FormEvent } from "react";
 
 import { MessageResponse } from "@/components/ai-elements/message";
 import { Shimmer } from "@/components/ai-elements/shimmer";
-import { AiDisclaimer, CopyButton, ErrorNotice, PageHeader, Segmented } from "@/components/tool-kit";
+import {
+  AiDisclaimer,
+  CopyButton,
+  ErrorNotice,
+  PageHeader,
+  Segmented,
+} from "@/components/tool-kit";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -59,7 +65,8 @@ const MODE_COPY: Record<ResearchMode, { label: string; placeholder: string; empt
   },
   recommendations: {
     label: "Describe your situation or goal",
-    placeholder: "e.g. Our team misses deadlines because priorities change weekly. How can we improve?",
+    placeholder:
+      "e.g. Our team misses deadlines because priorities change weekly. How can we improve?",
     empty: "Please describe your situation or goal.",
   },
 };
