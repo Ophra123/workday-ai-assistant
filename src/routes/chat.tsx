@@ -254,7 +254,7 @@ function ChatWindow({ initialMessages }: { initialMessages: UIMessage[] }) {
             aria-label="Chat message"
           />
           <PromptInputFooter className="justify-end">
-            <PromptInputSubmit status={status} onStop={stop} disabled={!busy && !input.trim()} />
+            <PromptInputSubmit status={status} onStop={stop} />
           </PromptInputFooter>
         </PromptInput>
         <AiDisclaimer className="mt-2" />
